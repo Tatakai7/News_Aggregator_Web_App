@@ -1,6 +1,6 @@
 ----- NEWS AGGREGATOR WEB APP -----
 
-![image alt](./screenshots/newsDefault.png)
+![News_Default](./public/images/NewsDefault.png)
 
 ## Usage
    1. Create a folder & Download the repository
