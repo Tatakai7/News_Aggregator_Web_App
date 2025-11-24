@@ -4,18 +4,21 @@ const categories = ['Technology', 'Sports', 'Health', 'Business', 'Science', 'En
 
 const CategoryFilter = ({ selectedCategory, onCategoryChange }) => {
     return (
-        <div className="flex justify-center my-4 space-x-4">
-            {categories.map((category) => (
-                <button
-                    key={category}
-                    className={`px-4 py-2 rounded ${selectedCategory === category ? 'bg-blue-600 text-white' : 'bg-gray-200'
-                        }`}
-                    onClick={() => onCategoryChange(category)}
-                >
-                    {category}
-                </button>
-            ))}
-        </div>
+        <div className="flex justify-center flex-wrap gap-2 my-8">
+      {categories.map((category) => (
+        <button
+          key={category}
+          className={`px-6 py-2 rounded-full font-medium transition-all duration-200 border ${
+            selectedCategory === category
+              ? "bg-secondary text-secondary-foreground border-secondary shadow-md"
+              : "bg-card text-foreground border-border hover:border-secondary hover:text-secondary"
+          }`}
+          onClick={() => onCategoryChange(category)}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
     );
 };
 
