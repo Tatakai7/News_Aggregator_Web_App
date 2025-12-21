@@ -2,7 +2,7 @@
 
 A modern, responsive, and user-friendly web application that aggregates news from multiple sources into one clean and intuitive interface. Built with React, React Router, Tailwind CSS, and Lucide Icons — optimized for speed, simplicity, and scalability.
 
-![image alt](./screenshots/newsDefault.png)
+![News_Default](./public/images/NewsDefault.png)
 
 ---
 
