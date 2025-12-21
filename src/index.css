@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 248 247 245;
+    --foreground: 25 24 23;
+    --primary: 25 24 23;
+    --primary-foreground: 248 247 245;
+    --secondary: 71 85 105;
+    --secondary-foreground: 248 247 245;
+    --accent: 71 85 105;
+    --accent-foreground: 248 247 245;
+    --muted: 203 207 211;
+    --muted-foreground: 107 114 128;
+    --border: 209 213 219;
+    --card: 255 255 255;
+    --card-foreground: 25 24 23;
+  }
+
+  .dark {
+    --background: 25 24 23;
+    --foreground: 248 247 245;
+    --primary: 248 247 245;
+    --primary-foreground: 25 24 23;
+    --secondary: 107 114 128;
+    --secondary-foreground: 248 247 245;
+    --accent: 100 116 139;
+    --accent-foreground: 248 247 245;
+    --muted: 55 65 81;
+    --muted-foreground: 156 163 175;
+    --border: 55 65 81;
+    --card: 31 41 55;
+    --card-foreground: 248 247 245;
+  }
+}
+
+@layer base {
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    transition: colors 200ms;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: "Monaco", "Courier New", monospace;
+  }
+
+    h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .news-card {
+    background-color: rgb(var(--card));
+    color: rgb(var(--card-foreground));
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: all 300ms;
+    overflow: hidden;
+    border: 1px solid rgb(var(--border));
+  }
+
+  .news-card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transform: translateY(-0.25rem);
+  }
+
+  .btn-primary {
+    background-color: rgb(var(--secondary));
+    color: rgb(var(--secondary-foreground));
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 200ms;
+  }
+
+  .btn-primary:hover {
+    background-color: #dbeafe;
+    color: #1e40af;
+  }
+
+  .btn-secondary {
+    background-color: rgb(var(--muted));
+    color: rgb(var(--foreground));
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 200ms;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgb(var(--border));
+  }
+
+  .nav-link {
+    color: rgb(var(--foreground));
+    transition: colors 200ms;
+    font-weight: 500;
+  }
+
+  .nav-link:hover {
+    color: rgb(var(--secondary));
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
