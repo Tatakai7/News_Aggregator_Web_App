@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import { useIndexedDB } from '../hooks/useIndexedDB';
+import useIndexedDB from '../hooks/useIndexedDB';
 
 const BookmarkContext = createContext();
 
